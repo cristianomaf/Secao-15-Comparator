@@ -16,9 +16,8 @@ public class Program {
 		lista.add(new Produto("Notebbok",1200.00));
 		lista.add(new Produto("Tablet",450.00));
 		
-		//ordena a lista
-		Collections.sort(lista); // o tipo da lista tem que ser implementacao de compaprable
-		
+		//ordena a lista usando metodo sort da classe List
+		lista.sort(new MyComparator());		
 	
 		//percorre a lista e imprime os obejtos p da lista
 		for(Produto p : lista) {
