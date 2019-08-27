@@ -20,10 +20,9 @@ public class Program {
 		//usando expressoes lambda
 		//criando uma classe anonima ignorando a classe myComparator criada anteriormente
 		                           //funcao anonima
-		Comparator<Produto> comp = (p1,p2) ->{
-			return p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase());
-			
-		};				
+		//enxugando a expressao****
+		Comparator<Produto> comp = (p1,p2) ->p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase());
+				
 		
 		lista.sort(comp);		
 	
