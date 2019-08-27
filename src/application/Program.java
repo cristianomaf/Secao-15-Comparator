@@ -17,17 +17,13 @@ public class Program {
 		lista.add(new Produto("Tablet",450.00));
 		
 		
+		//usando expressoes lambda
 		//criando uma classe anonima ignorando a classe myComparator criada anteriormente
-		Comparator<Produto> comp = new Comparator<Produto>() {
-
-			@Override
-			public int compare(Produto o1, Produto o2) {
-				
-				return o1.getNome().toUpperCase().compareTo(o2.getNome().toUpperCase());
-			}
+		                           //funcao anonima
+		Comparator<Produto> comp = (p1,p2) ->{
+			return p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase());
 			
-		};
-		//ordena a lista usando metodo sort da classe List
+		};				
 		
 		lista.sort(comp);		
 	
